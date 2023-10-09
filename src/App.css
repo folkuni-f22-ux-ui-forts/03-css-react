@@ -63,4 +63,24 @@ main {
 .visibility-container.invisible > :nth-child(3) {
 	display: none;
 }
-/* .visibility-container > :nth-child(4) {} */
+
+
+.form {
+	border: 1px solid black;
+	margin-top: 2em;
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	/* font-size: 175%; */
+}
+input, .form button {
+	font-size: 150%
+}
+.form input:focus {
+	background-color: rgb(242, 174, 185);
+}
+.form .fancy {
+	background-color: gold;
+	border-radius: 0.7em;
+}
