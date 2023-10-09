@@ -12,6 +12,12 @@ main {
 	min-height: 100vh;
 }
 
+.chameleon-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;  /* undvik att button sträcks ut i höjdled */
+	gap: 1em;  /* luft mellan elementen */
+}
 .chameleon {
 	width: 8em;
 	height: 4em;
@@ -28,3 +34,33 @@ main {
 .chameleon.toggled {
 	background-color: rgb(45, 45, 142);
 }
+
+
+
+.visibility-container {
+	margin-top: 1em;
+	border: 1px solid black;
+	display: inline-flex;
+}
+.visibility-container > * {
+	width: 5em;
+	height: 3em;
+	border: 1px solid darkgray;
+	margin: 0.2em;
+	background-color: rgb(98, 184, 160);
+	visibility: visible;
+	opacity: 1;
+	display: block;
+	transition: all 2s linear;
+}
+
+.visibility-container.invisible > :nth-child(1) {
+	visibility: hidden;
+}
+.visibility-container.invisible > :nth-child(2) {
+	opacity: 0;
+}
+.visibility-container.invisible > :nth-child(3) {
+	display: none;
+}
+/* .visibility-container > :nth-child(4) {} */
